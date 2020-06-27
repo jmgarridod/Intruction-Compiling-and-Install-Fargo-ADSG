@@ -19,7 +19,7 @@ Make shure that you have installed with:
 which gcc
 ```
 you obtaint (or another direction):
-###### /usr/bin/gcc
+##### /usr/bin/gcc
 #
 
 or 
@@ -28,10 +28,10 @@ gcc --version
 ```
 
 you obtaint (or another version no problem): 
-###### gcc (GCC) 10.1.1 20200507 (Red Hat 10.1.1-1)
-###### Copyright (C) 2020 Free Software Foundation, Inc.
-###### This is free software; see the source for copying conditions.  There is NO
-###### warranty; not even for MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.
+##### gcc (GCC) 10.1.1 20200507 (Red Hat 10.1.1-1)
+##### Copyright (C) 2020 Free Software Foundation, Inc.
+##### This is free software; see the source for copying conditions.  There is NO
+##### warranty; not even for MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.
 #
 
 the same for g++.  
@@ -119,7 +119,7 @@ which mpirun
 
 and obtaion the installation folder:
 
-###### /usr/local/openmpi/bin/mpirun
+##### /usr/local/openmpi/bin/mpirun
 #
 if you go to the folder installation, in this case "/usr/local/openmpi/bin/", you should see many files, the most important for this instace are: mpirun, mpicc, mpic++.
 
@@ -230,22 +230,23 @@ sudo make BUILD="parallelfftw"
 
 If all is well, you should get a message like this and code see: successfully.txt in this repository.
 
-###### Creating ../source.tar.bz2
-###### NOTE
-###### This built is PARALLEL (MPI) and uses FFTW librairies
-###### If you want to change this,
-###### then you need to issue:
-###### gmake BUILD=parallel
-###### gmake BUILD=sequentialfftw
-###### gmake BUILD=sequential
+##### Creating ../source.tar.bz2
+##### NOTE
+##### This built is PARALLEL (MPI) and uses FFTW librairies
+##### If you want to change this,
+##### then you need to issue:
+##### gmake BUILD=parallel
+##### gmake BUILD=sequentialfftw
+##### gmake BUILD=sequential
 #
 
-#### Congratulations !! you installed Fargo-ADSG, make sure you have the "fargo" file in the "Fargo-ADSG" folder.
+### Congratulations !! you installed Fargo-ADSG, make sure you have the "fargo" file in the "Fargo-ADSG" folder.
  
  ---
-### Wait? ... Do you say: I have a problem in the code or compile ?
+ ---
+#### Wait? ... Do you say: I have a problem in the code or compile ?
 
-#### Dont worry, Here I leave you a compilation of the most common problems that the Fargo installation has left me
+##### Dont worry, Here I leave you a compilation of the most common problems that the Fargo installation has left me
 
 # SOLUTION PROBLEMS
 
