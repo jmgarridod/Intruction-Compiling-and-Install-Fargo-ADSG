@@ -2,7 +2,8 @@
 #### Step by step instrucction to compilling and install Fargo-ADSG, requeriments and solution currently problems.
 
 
-![image](http://fargo.in2p3.fr/manuals/html/_images/gnuplot.png)
+![image](http://fargo.in2p3.fr/manuals/html/_images/gnuplot.png)  
+
 Download fargo contain many problems and headache, but don't worry is not IRAF, with this guide is possible obtaint a great results. Before to install Fargo-ADSG we need install two another "libraries" for a compiling in parallel and obtain the maximum efficiency. 
 
   - openmpi-4 version (4.0.0 or 4.0.4 is recomended)
