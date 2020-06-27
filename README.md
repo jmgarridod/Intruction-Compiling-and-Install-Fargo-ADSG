@@ -66,7 +66,8 @@ For Fedora don't find them in yum or dnf, just ignore them.
 
 Download openmpi-4.0.0:
 | openmpi-4.0.0    | https://www.open-mpi.org/software/ompi/v4.0/ |
-| --------- | -----:|
+| --------- | -----:|  
+
 go to the folder where you download or save openmpi-4.0.0
 ```sh
 tar -xvf openmpi-4.0.0.tar.gz
@@ -159,28 +160,28 @@ ls
 ```
 
 we will find 3 folders, "include" must contain 4 files, "info" 6 files (not relevant) and "lib" 8 files.
-- /include/
-        - fftw.h
-        - fftw_mpi.h
-        - rfftw.h
-        - rfftw_mpi.h
-- /info/
-        - fftw.info 
-        - fftw.info-1
-        - fftw.info-2
-        - fftw.info-3
-        - fftw.info-5
-        - fftw.info-6
+- /include/  
+        - fftw.h  
+        - fftw_mpi.h  
+        - rfftw.h  
+        - rfftw_mpi.h  
+- /info/  
+        - fftw.info   
+        - fftw.info-1  
+        - fftw.info-2  
+        - fftw.info-3  
+        - fftw.info-5  
+        - fftw.info-6  
 
-- /lib/
-        - libfftw.a
-        - libfftw.la
-        - libfftw_mpi.a
-        - libfftw_mpi.la
-        - librfftw.a
-        - librfftw.la
-        - librfftw_mpi.a
-        - librfftw_mpi.la
+- /lib/  
+        - libfftw.a  
+        - libfftw.la  
+        - libfftw_mpi.a  
+        - libfftw_mpi.la  
+        - librfftw.a  
+        - librfftw.la  
+        - librfftw_mpi.a  
+        - librfftw_mpi.la  
 
 Files with "_mpi" ending are very important, make sure they are in the folders. If they are not found, go back to the installation step and make sure to call MPICC correctly.
 If you contain all the files, you completed the installation !!!
@@ -238,12 +239,12 @@ If all is well, you should get a message like this and code see: successfully.tx
 ###### gmake BUILD=sequential
 #
 
- #### Congratulations !! you installed Fargo-ADSG, make sure you have the "fargo" file in the "Fargo-ADSG" folder.
+#### Congratulations !! you installed Fargo-ADSG, make sure you have the "fargo" file in the "Fargo-ADSG" folder.
  
  ---
-## Wait? ... Do you say: I have a problem in the code or compile ?
+### Wait? ... Do you say: I have a problem in the code or compile ?
 
-##### Dont worry, Here I leave you a compilation of the most common problems that the Fargo installation has left me
+#### Dont worry, Here I leave you a compilation of the most common problems that the Fargo installation has left me
 
 # SOLUTION PROBLEMS
 
