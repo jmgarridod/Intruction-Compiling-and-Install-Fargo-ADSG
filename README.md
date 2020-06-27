@@ -7,7 +7,7 @@
 Download fargo contain many problems and headache, but don't worry is not IRAF, with this guide is possible obtaint a great results. Before to install Fargo-ADSG we need install two another "libraries" for a compiling in parallel and obtain the maximum efficiency. 
 
   - openmpi-4 version (4.0.0 or 4.0.4 is recomended)
-  - fftw-2.1.5
+  - fftw-2.1.5 (must be 2.1.5 version)
 ---
 # OpenMPI
 Before to install OpenMPI , we need minumum two compilers gcc and g++.
