@@ -1,0 +1,84 @@
+[name_user@computer src]$ make BUILD="parallelfftw"
+Running variable parser
+cc	LowTasks.c -c -O  -D_PARALLEL -I/usr/local/openmpi/include -D_FFTW -I/usr/local/fftwlib/include
+cc	SideEuler.c -c -O  -D_PARALLEL -I/usr/local/openmpi/include -D_FFTW -I/usr/local/fftwlib/include
+cc	Output.c -c -O  -D_PARALLEL -I/usr/local/openmpi/include -D_FFTW -I/usr/local/fftwlib/include
+cc	Init.c -c -O  -D_PARALLEL -I/usr/local/openmpi/include -D_FFTW -I/usr/local/fftwlib/include
+cc	main.c -c -O  -D_PARALLEL -I/usr/local/openmpi/include -D_FFTW -I/usr/local/fftwlib/include
+cc	Theo.c -c -O  -D_PARALLEL -I/usr/local/openmpi/include -D_FFTW -I/usr/local/fftwlib/include
+cc	Interpret.c -c -O  -D_PARALLEL -I/usr/local/openmpi/include -D_FFTW -I/usr/local/fftwlib/include
+cc	SourceEuler.c -c -O  -D_PARALLEL -I/usr/local/openmpi/include -D_FFTW -I/usr/local/fftwlib/include
+cc	TransportEuler.c -c -O  -D_PARALLEL -I/usr/local/openmpi/include -D_FFTW -I/usr/local/fftwlib/include
+cc	Stockholm.c -c -O  -D_PARALLEL -I/usr/local/openmpi/include -D_FFTW -I/usr/local/fftwlib/include
+cc	Planet.c -c -O  -D_PARALLEL -I/usr/local/openmpi/include -D_FFTW -I/usr/local/fftwlib/include
+cc	RungeKunta.c -c -O  -D_PARALLEL -I/usr/local/openmpi/include -D_FFTW -I/usr/local/fftwlib/include
+cc	Viscosity.c -c -O  -D_PARALLEL -I/usr/local/openmpi/include -D_FFTW -I/usr/local/fftwlib/include
+cc	Psys.c -c -O  -D_PARALLEL -I/usr/local/openmpi/include -D_FFTW -I/usr/local/fftwlib/include
+cc	Force.c -c -O  -D_PARALLEL -I/usr/local/openmpi/include -D_FFTW -I/usr/local/fftwlib/include
+cc	var.c -c -O  -D_PARALLEL -I/usr/local/openmpi/include -D_FFTW -I/usr/local/fftwlib/include
+cc	Pframeforce.c -c -O  -D_PARALLEL -I/usr/local/openmpi/include -D_FFTW -I/usr/local/fftwlib/include
+cc	split.c -c -O  -D_PARALLEL -I/usr/local/openmpi/include -D_FFTW -I/usr/local/fftwlib/include
+cc	merge.c -c -O  -D_PARALLEL -I/usr/local/openmpi/include -D_FFTW -I/usr/local/fftwlib/include
+cc	commbound.c -c -O  -D_PARALLEL -I/usr/local/openmpi/include -D_FFTW -I/usr/local/fftwlib/include
+cc	fpe.c -c -O  -D_PARALLEL -I/usr/local/openmpi/include -D_FFTW -I/usr/local/fftwlib/include
+cc	rebin.c -c -O  -D_PARALLEL -I/usr/local/openmpi/include -D_FFTW -I/usr/local/fftwlib/include
+cc	sgmain.c -c -O  -D_PARALLEL -I/usr/local/openmpi/include -D_FFTW -I/usr/local/fftwlib/include
+cc	sginit.c -c -O  -D_PARALLEL -I/usr/local/openmpi/include -D_FFTW -I/usr/local/fftwlib/include
+sginit.c: In function ‘init_sg’:
+sginit.c:45:14: warning: assignment to ‘fftw_complex *’ from incompatible pointer type ‘fftw_real *’ {aka ‘double *’} [-Wincompatible-pointer-types]
+   45 |     SGP_Accr = (fftw_real *) fftw_malloc (sizeof(fftw_real) * 2 * GLOBALNRAD);
+      |              ^
+cc -Xlinker --allow-multiple-definition  sgdens.c -c -O  -D_PARALLEL -I/usr/local/openmpi/include -D_FFTW -I/usr/local/fftwlib/include
+cc -Xlinker --allow-multiple-definition  sgkernel.c -c -O  -D_PARALLEL -I/usr/local/openmpi/include -D_FFTW -I/usr/local/fftwlib/include
+cc -Xlinker --allow-multiple-definition  sgacc.c -c -O  -D_PARALLEL -I/usr/local/openmpi/include -D_FFTW -I/usr/local/fftwlib/include
+sgacc.c: In function ‘compute_sgacc’:
+sgacc.c:39:41: warning: passing argument 3 of ‘rfftwnd_mpi’ from incompatible pointer type [-Wincompatible-pointer-types]
+   39 |   rfftwnd_mpi (SGP_fftplan_backward, 1, SGP_Accr, NULL, FFTW_TRANSPOSED_ORDER);
+      |                                         ^~~~~~~~
+      |                                         |
+      |                                         fftw_complex *
+In file included from mp.h:13,
+                 from sgacc.c:1:
+/usr/local/fftwlib/include/rfftw_mpi.h:63:21: note: expected ‘fftw_real *’ {aka ‘double *’} but argument is of type ‘fftw_complex *’
+   63 |          fftw_real *local_data, fftw_real *work,
+      |          ~~~~~~~~~~~^~~~~~~~~~
+sgacc.c:41:41: warning: passing argument 3 of ‘rfftwnd_mpi’ from incompatible pointer type [-Wincompatible-pointer-types]
+   41 |   rfftwnd_mpi (SGP_fftplan_backward, 1, SGP_Acct, NULL, FFTW_TRANSPOSED_ORDER);
+      |                                         ^~~~~~~~
+      |                                         |
+      |                                         fftw_complex *
+In file included from mp.h:13,
+                 from sgacc.c:1:
+/usr/local/fftwlib/include/rfftw_mpi.h:63:21: note: expected ‘fftw_real *’ {aka ‘double *’} but argument is of type ‘fftw_complex *’
+   63 |          fftw_real *local_data, fftw_real *work,
+      |          ~~~~~~~~~~~^~~~~~~~~~
+cc -Xlinker --allow-multiple-definition  sgzero.c -c -O  -D_PARALLEL -I/usr/local/openmpi/include -D_FFTW -I/usr/local/fftwlib/include
+sgzero.c: In function ‘compute_SGZeroMode’:
+sgzero.c:65:38: warning: passing argument 2 of ‘rfftw_one’ from incompatible pointer type [-Wincompatible-pointer-types]
+   65 |   rfftw_one (SGP_fft1Dplan_backward, SGP_Accr, NULL);
+      |                                      ^~~~~~~~
+      |                                      |
+      |                                      fftw_complex *
+In file included from /usr/local/fftwlib/include/rfftw_mpi.h:24,
+                 from mp.h:13,
+                 from sgzero.c:1:
+/usr/local/fftwlib/include/rfftw.h:42:51: note: expected ‘fftw_real *’ {aka ‘double *’} but argument is of type ‘fftw_complex *’
+   42 | extern void rfftw_one(rfftw_plan plan, fftw_real *in, fftw_real *out);
+      |                                        ~~~~~~~~~~~^~
+cc	sgupdate.c -c -O  -D_PARALLEL -I/usr/local/openmpi/include -D_FFTW -I/usr/local/fftwlib/include
+cc	sgvelinit.c -c -O  -D_PARALLEL -I/usr/local/openmpi/include -D_FFTW -I/usr/local/fftwlib/include
+cc  sgsysinit.c -c -O  -D_PARALLEL -I/usr/local/openmpi/include -D_FFTW -I/usr/local/fftwlib/include
+cc  axilib.c -c -O  -D_PARALLEL -I/usr/local/openmpi/include -D_FFTW -I/usr/local/fftwlib/include
+cc  aniso.c -c -O  -D_PARALLEL -I/usr/local/openmpi/include -D_FFTW -I/usr/local/fftwlib/include
+cc  LowTasks.o SideEuler.o Output.o Init.o main.o Theo.o Interpret.o SourceEuler.o TransportEuler.o Stockholm.o Planet.o RungeKunta.o Viscosity.o Psys.o Force.o var.o Pframeforce.o split.o merge.o commbound.o fpe.o rebin.o sgmain.o sginit.o sgdens.o sgkernel.o sgacc.o sgzero.o sgupdate.o sgvelinit.o sgsysinit.o axilib.o aniso.o  -O  -D_PARALLEL -I/usr/local/openmpi/include -D_FFTW -I/usr/local/fftwlib/include -o ../fargo -lm -L/usr/local/openmpi/lib -lmpi -L/usr/local/fftwlib/lib -lrfftw_mpi -lfftw_mpi -lrfftw -lfftw
+Creating ../source.tar.bz2
+
+
+      NOTE
+
+This built is PARALLEL (MPI) and uses FFTW librairies
+If you want to change this,
+then you need to issue:
+gmake BUILD=parallel
+gmake BUILD=sequentialfftw
+gmake BUILD=sequential
