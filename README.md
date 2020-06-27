@@ -251,8 +251,7 @@ If all is well, you should get a message like this and code see: successfully.tx
 
 ...
 
-....
-...
+# BUILDING ...BUILDING ...BUILDING ...BUILDING ...BUILDING
 
 
 
