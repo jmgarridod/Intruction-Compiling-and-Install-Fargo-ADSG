@@ -248,9 +248,25 @@ If all is well, you should get a message like this and code see: successfully.tx
 
 ##### Dont worry, Here I leave you a compilation of the most common problems that the Fargo installation has left me
 
-# SOLUTION PROBLEMS
+# Solution Problems
 
-...
+## N°1: Multiple definition of ... firts defined here
+Error: I not sure why occurs this problem, because only once was presented. I think that is due gcc version. Find the solution is hard, but fix the problem its easy.
+```sh
+/usr/bin/ld: sgsysinit.o:(.bss+0x40): multiple definition of `SG_Acct'; LowTasks.o:(.bss+0x40): first defined here
+collect2: error: ld returned 1 exit statuswhich gcc
+```
+The solution for this error is editing "makefile". Adding "-Xlinker --allow-multiple-definition" at "PARACOMPT" line (89)
+Before:
+```sh
+PARACOMP    = $(PARACC_$(FARGO_ARCH))
+```
+After:
+```sh
+PARACOMP    = $(PARACC_$(FARGO_ARCH)) -Xlinker --allow-multiple-definition 
+```
+
+
 
 # BUILDING ...BUILDING ...BUILDING ...BUILDING ...BUILDING
 
