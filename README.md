@@ -1,5 +1,5 @@
 # Intruction-Compiling-and-Install-Fargo-ADSG
-#### Step by step instrucction to compilling and install Fargo-ADSG, requeriments and solution currently problems.
+#### Step by step instrucction to compilling and install Fargo-ADSG, requirements and solution currently problems.
 
 
 ![image](http://fargo.in2p3.fr/local/cache-vignettes/L495xH373/meshjup-b9d9b.jpg)  
@@ -27,7 +27,7 @@ or
 gcc --version
 ```
 
-you obtaint (or another version no problem): 
+you obtain (or another version no problem): 
 ##### gcc (GCC) 10.1.1 20200507 (Red Hat 10.1.1-1)
 ##### Copyright (C) 2020 Free Software Foundation, Inc.
 ##### This is free software; see the source for copying conditions.  There is NO
@@ -45,7 +45,7 @@ sudo yum install compat-gcc-34-g77
 
 - Is posible that g77 is not found. try install "gfortran"
 -----
-Other possible repositores needed are (specially in Ubuntu):
+Other possible repositories needed are (specially in Ubuntu):
 - openmpi-bin
 - openmpi-common
 - openssh-client
@@ -98,7 +98,7 @@ sudo make
 sudo make install
 ```
 
-We install openmpi, the next step is call and/or write the parth and libries in ".bashrc". Why ? : is a permanent call (dont worry you can errase after), with this you will not have to call openmpi every time you use it.
+We install openmpi, the next step is call and/or write the parth and libraries in ".bashrc". Why ? : is a permanent call (dont worry you can erase after), with this you will not have to call openmpi every time you use it.
 Firts locate the file ".bashrc"
  ```sh
 locate .bashrc
@@ -117,11 +117,11 @@ For make a test of installation
 which mpirun
 ```
 
-and obtaion the installation folder:
+and obtain the installation folder:
 
 ##### /usr/local/openmpi/bin/mpirun
 #
-if you go to the folder installation, in this case "/usr/local/openmpi/bin/", you should see many files, the most important for this instace are: mpirun, mpicc, mpic++.
+if you go to the folder installation, in this case "/usr/local/openmpi/bin/", you should see many files, the most important for this instance are: mpirun, mpicc, mpic++.
 
 ---
 ---
